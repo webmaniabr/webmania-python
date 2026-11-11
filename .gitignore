@@ -1,0 +1,13 @@
+.venv*/
+artifacts/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# macOS metadata
+.DS_Store
+._*

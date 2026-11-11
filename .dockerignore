@@ -1,0 +1,10 @@
+.git
+.venv*
+artifacts
+**/__pycache__
+.mypy_cache
+.pytest_cache
+
+# macOS metadata is never a build input
+**/.DS_Store
+**/._*

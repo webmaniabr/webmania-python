@@ -1,0 +1,1508 @@
+{
+  "nfeGetCertificateValidity": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/certificado/",
+    "verb": "GET",
+    "client": "Nfe",
+    "method": "get_certificate_validity",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeGetSefazStatus": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/sefaz/",
+    "verb": "GET",
+    "client": "Nfe",
+    "method": "get_sefaz_status",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeGetDocument": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/consulta/",
+    "verb": "GET",
+    "client": "Nfe",
+    "method": "get_document",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "chave": {
+          "$ref": "#/components/schemas/AccessKey"
+        },
+        "uuid": {
+          "type": "string",
+          "description": "Document UUID compared after trimming surrounding whitespace."
+        },
+        "ID": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15
+        },
+        "ambiente": {
+          "$ref": "#/components/schemas/Environment"
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeQueryDocument": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/consulta/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "query_document",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeCreateCorrection": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/cartacorrecao/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "create_correction",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeCreateManifestation": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/manifesta/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "create_manifestation",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeCancelDocument": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/cancelar/",
+    "verb": "PUT",
+    "client": "Nfe",
+    "method": "cancel_document",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeVoidNumbering": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/inutilizar/",
+    "verb": "PUT",
+    "client": "Nfe",
+    "method": "void_numbering",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeCreatePaymentEvent": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/conciliacao/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "create_payment_event",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeCancelPaymentEvent": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/conciliacao/cancelar/",
+    "verb": "PUT",
+    "client": "Nfe",
+    "method": "cancel_payment_event",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeCancelIbsCbsEvent": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/evento-ibs-cbs/cancelar/",
+    "verb": "PUT",
+    "client": "Nfe",
+    "method": "cancel_ibs_cbs_event",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeListTaxClasses": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/classe-imposto/",
+    "verb": "GET",
+    "client": "Nfe",
+    "method": "list_tax_classes",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDeleteTaxClasses": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/classe-imposto/",
+    "verb": "DELETE",
+    "client": "Nfe",
+    "method": "delete_tax_classes",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeSaveTaxClasses": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/classe-imposto/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "save_tax_classes",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeIssueDocument": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/emissao/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "issue_document",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeIssueReturn": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/devolucao/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "issue_return",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeIssueAdjustment": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/ajuste/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "issue_adjustment",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeIssueComplement": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/complementar/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "issue_complement",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fiscalUpdateCompany": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/empresa/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "update_company",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fiscalCreateOrPollReport": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/relatorios/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "create_or_poll_report",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeCreateIbsCbsEvent": {
+    "module": "api1_fiscal",
+    "path": "/1/nfe/evento-ibs-cbs/",
+    "verb": "POST",
+    "client": "Nfe",
+    "method": "create_ibs_cbs_event",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadDanfe": {
+    "module": "api1_files",
+    "path": "/danfe/{identifier}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_danfe",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadSimpleDanfe": {
+    "module": "api1_files",
+    "path": "/danfe/simples/{identifier}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_simple_danfe",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadLabelDanfe": {
+    "module": "api1_files",
+    "path": "/danfe/etiqueta/{identifier}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_label_danfe",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadCorrectionPdf": {
+    "module": "api1_files",
+    "path": "/dacce/{identifier}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_correction_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadCorrectionPdfSequence": {
+    "module": "api1_files",
+    "path": "/dacce/{identifier}/{event}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_correction_pdf_sequence",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadXml": {
+    "module": "api1_files",
+    "path": "/xmlnfe/{identifier}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadCancellationXml": {
+    "module": "api1_files",
+    "path": "/xmlnfe/{identifier}/cancelamento",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_cancellation_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadCorrectionXml": {
+    "module": "api1_files",
+    "path": "/xmlcce/{identifier}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_correction_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadCorrectionXmlSequence": {
+    "module": "api1_files",
+    "path": "/xmlcce/{identifier}/{event}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_correction_xml_sequence",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadManifestationXml": {
+    "module": "api1_files",
+    "path": "/xmlmde/{uuid}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_manifestation_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadPaymentEventXml": {
+    "module": "api1_files",
+    "path": "/xmleconf/{identifier}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_payment_event_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadPaymentEventXmlSequence": {
+    "module": "api1_files",
+    "path": "/xmleconf/{identifier}/{event}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_payment_event_xml_sequence",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "nfeDownloadIbsCbsEventXml": {
+    "module": "api1_files",
+    "path": "/xmlevento/{uuid}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_ibs_cbs_event_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "download": {
+          "type": "integer",
+          "const": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fiscalDownloadReport": {
+    "module": "api1_files",
+    "path": "/relatorio/{uuid}/",
+    "verb": "GET",
+    "client": "NfeFiles",
+    "method": "download_report",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "b2bV1CreateCompanies": {
+    "module": "api1_b2b",
+    "path": "/api/1/b2b/empresas/",
+    "verb": "POST",
+    "client": "Reseller",
+    "method": "create_companies",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "b2bV1ListCompanies": {
+    "module": "api1_b2b",
+    "path": "/api/1/b2b/empresas/",
+    "verb": "GET",
+    "client": "Reseller",
+    "method": "list_companies",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "b2bV1GetProcessedRequests": {
+    "module": "api1_b2b",
+    "path": "/api/1/b2b/requests/",
+    "verb": "GET",
+    "client": "Reseller",
+    "method": "get_processed_requests",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "mes": {
+          "type": "string",
+          "pattern": "^(0[1-9]|1[0-2])$"
+        },
+        "ano": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$"
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterIssueCte": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/emissao",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "issue_cte",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterIssueSimplifiedCte": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/emissao/simplificada",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "issue_simplified_cte",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCancelCte": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/cancelar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "cancel_cte",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCorrectCte": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/correcao",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "correct_cte",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterConfirmCteDelivery": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/entrega",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "confirm_cte_delivery",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCancelCteDelivery": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/entrega/cancelar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "cancel_cte_delivery",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterLinkCtePayment": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/evento",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "link_cte_payment",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCancelCtePaymentLink": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/evento/cancelar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "cancel_cte_payment_link",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetCte": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/consulta/{identifier}",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_cte",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetCtePaymentEvents": {
+    "module": "api2_cte_issuance",
+    "path": "/2/cte/consulta/evento/{identifier}",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_cte_payment_events",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterIssueDce": {
+    "module": "api2_dce_issuance",
+    "path": "/2/dce/emissao",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "issue_dce",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCancelDce": {
+    "module": "api2_dce_issuance",
+    "path": "/2/dce/cancelar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "cancel_dce",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetDce": {
+    "module": "api2_dce_issuance",
+    "path": "/2/dce/consulta/{identifier}",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_dce",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetNfseXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmlnfse/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_nfse_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetNfsePdf": {
+    "module": "api2_emitter_files",
+    "path": "/nfse/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_nfse_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetNfseRpsPdf": {
+    "module": "api2_emitter_files",
+    "path": "/darps/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_nfse_rps_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetCteXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmlcte/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_cte_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetCteCancelXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmlcte/{identifier}/cancelamento",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_cte_cancel_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetCtePdf": {
+    "module": "api2_emitter_files",
+    "path": "/dacte/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_cte_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetCteCorrectionXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmlcce/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_cte_correction_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetCteCorrectionPdf": {
+    "module": "api2_emitter_files",
+    "path": "/dacce/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_cte_correction_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetMdfeXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmlmdfe/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_mdfe_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetMdfePdf": {
+    "module": "api2_emitter_files",
+    "path": "/damdfe/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_mdfe_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetNfcomXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmlnfcom/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_nfcom_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetNfcomCancelXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmlnfcom/{identifier}/cancelamento",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_nfcom_cancel_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetNfcomPdf": {
+    "module": "api2_emitter_files",
+    "path": "/danfecom/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_nfcom_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetDceXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmldce/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_dce_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetDceCancelXml": {
+    "module": "api2_emitter_files",
+    "path": "/xmldce/{identifier}/cancelamento",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_dce_cancel_xml",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fileGetDcePdf": {
+    "module": "api2_emitter_files",
+    "path": "/dace/{identifier}",
+    "verb": "GET",
+    "client": "EmitterFiles",
+    "method": "get_dce_pdf",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetNfseProviderStatus": {
+    "module": "api2_emitter_reads",
+    "path": "/2/nfse/status",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_nfse_provider_status",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "todos_servicos": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetNfcomServiceStatus": {
+    "module": "api2_emitter_reads",
+    "path": "/2/nfcom/status",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_nfcom_service_status",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetNfse": {
+    "module": "api2_emitter_reads",
+    "path": "/2/nfse/consulta/{identifier}",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_nfse",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetNfcom": {
+    "module": "api2_emitter_reads",
+    "path": "/2/nfcom/consulta/{identifier}",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_nfcom",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetNfcomPaymentEvents": {
+    "module": "api2_emitter_reads",
+    "path": "/2/nfcom/consulta/evento/{identifier}",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_nfcom_payment_events",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterManifestNfse": {
+    "module": "api2_emitter_reads",
+    "path": "/2/nfse/manifestar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "manifest_nfse",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterIssueMdfe": {
+    "module": "api2_mdfe_issuance",
+    "path": "/2/mdfe/emissao",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "issue_mdfe",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCloseMdfe": {
+    "module": "api2_mdfe_issuance",
+    "path": "/2/mdfe/encerrar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "close_mdfe",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCancelMdfe": {
+    "module": "api2_mdfe_issuance",
+    "path": "/2/mdfe/cancelar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "cancel_mdfe",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterAddMdfeConductor": {
+    "module": "api2_mdfe_issuance",
+    "path": "/2/mdfe/condutor",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "add_mdfe_conductor",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterGetMdfe": {
+    "module": "api2_mdfe_issuance",
+    "path": "/2/mdfe/consulta/{key}",
+    "verb": "GET",
+    "client": "Emitter",
+    "method": "get_mdfe",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorSearchDocuments": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos",
+    "verb": "POST",
+    "client": "Monitor",
+    "method": "search_documents",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "per_page": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 200
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorGetDocument": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos/{fd}",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "get_document",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "atualizar_status": {
+          "type": [
+            "integer",
+            "string"
+          ],
+          "enum": [
+            0,
+            1,
+            "0",
+            "1"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorListDocumentEvents": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos/{fd}/eventos",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "list_document_events",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorManifestDocument": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos/{fd}/eventos",
+    "verb": "POST",
+    "client": "Monitor",
+    "method": "manifest_document",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorListReports": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos/relatorios",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "list_reports",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "per_page": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 200,
+          "default": 50
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorDownloadReport": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos/relatorios/{report}",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "download_report",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorImportDocument": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos/importacoes",
+    "verb": "POST",
+    "client": "Monitor",
+    "method": "import_document",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorGetImportStatus": {
+    "module": "api2_monitor_documents",
+    "path": "/2/monitor/documentos/importacoes/{uuid}",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "get_import_status",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorCreateCompany": {
+    "module": "api2_monitor_management",
+    "path": "/2/monitor/empresas",
+    "verb": "POST",
+    "client": "Monitor",
+    "method": "create_company",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorUpdateCompany": {
+    "module": "api2_monitor_management",
+    "path": "/2/monitor/empresas/{company}",
+    "verb": "PUT",
+    "client": "Monitor",
+    "method": "update_company",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorCreateCompanyMunicipality": {
+    "module": "api2_monitor_management",
+    "path": "/2/monitor/empresas/{company}/municipios-nfse",
+    "verb": "POST",
+    "client": "Monitor",
+    "method": "create_company_municipality",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorUpdateCompanyMunicipality": {
+    "module": "api2_monitor_management",
+    "path": "/2/monitor/empresas/{company}/municipios-nfse/{download}",
+    "verb": "PUT",
+    "client": "Monitor",
+    "method": "update_company_municipality",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorDeleteCompanyMunicipality": {
+    "module": "api2_monitor_management",
+    "path": "/2/monitor/empresas/{company}/municipios-nfse/{download}",
+    "verb": "DELETE",
+    "client": "Monitor",
+    "method": "delete_company_municipality",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorListCompanies": {
+    "module": "api2_monitor_reads",
+    "path": "/2/monitor/empresas",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "list_companies",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "per_page": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 200,
+          "default": 50
+        },
+        "pesquisa": {
+          "type": "string",
+          "minLength": 3
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorGetCompany": {
+    "module": "api2_monitor_reads",
+    "path": "/2/monitor/empresas/{company}",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "get_company",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorListCompanyMunicipalities": {
+    "module": "api2_monitor_reads",
+    "path": "/2/monitor/empresas/{company}/municipios-nfse",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "list_company_municipalities",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "per_page": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 200,
+          "default": 50
+        },
+        "municipio": {
+          "type": "string",
+          "minLength": 3
+        },
+        "uf": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "codigo_ibge": {
+          "type": "string",
+          "pattern": "^[0-9]{7}$"
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorGetCompanyMunicipality": {
+    "module": "api2_monitor_reads",
+    "path": "/2/monitor/empresas/{company}/municipios-nfse/{download}",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "get_company_municipality",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorListAvailableMunicipalities": {
+    "module": "api2_monitor_reads",
+    "path": "/2/monitor/municipios-nfse",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "list_available_municipalities",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "codigo_ibge": {
+          "type": "string",
+          "pattern": "^[0-9]{7}$"
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "monitorGetDownloadStatistics": {
+    "module": "api2_monitor_reads",
+    "path": "/2/monitor/estatisticas/downloads",
+    "verb": "GET",
+    "client": "Monitor",
+    "method": "get_download_statistics",
+    "query_schema": {
+      "type": "object",
+      "properties": {
+        "ano": {
+          "type": "integer",
+          "minimum": 2025
+        },
+        "mes": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 12
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterIssueNfcom": {
+    "module": "api2_nfcom_issuance",
+    "path": "/2/nfcom/emissao",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "issue_nfcom",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCancelNfcom": {
+    "module": "api2_nfcom_issuance",
+    "path": "/2/nfcom/cancelar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "cancel_nfcom",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterIssueNfse": {
+    "module": "api2_nfse_issuance",
+    "path": "/2/nfse/emissao",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "issue_nfse",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterCancelNfse": {
+    "module": "api2_nfse_issuance",
+    "path": "/2/nfse/cancelar",
+    "verb": "PUT",
+    "client": "Emitter",
+    "method": "cancel_nfse",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "emitterReplaceNfse": {
+    "module": "api2_nfse_issuance",
+    "path": "/2/nfse/substituir",
+    "verb": "POST",
+    "client": "Emitter",
+    "method": "replace_nfse",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "fiscalDownloadReportV2": {
+    "module": "api2_reports",
+    "path": "/relatorios/{uuid}",
+    "verb": "GET",
+    "client": "ReportFiles",
+    "method": "download_report_v2",
+    "query_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  }
+}

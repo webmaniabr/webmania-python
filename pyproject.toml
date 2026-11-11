@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling==1.32.4"]
+build-backend = "hatchling.build"
+
+[project]
+name = "webmania-sdk"
+version = "0.1.0a8"
+description = "Webmania Emissor Fiscal and Monitor Fiscal synchronous Python SDK (preview)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "LicenseRef-Webmania-Proprietary"
+license-files = ["LICENSE"]
+authors = [{name = "Webmania"}]
+dependencies = ["jsonschema[format-nongpl]>=4.26.0,<5"]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3.11", "Programming Language :: Python :: 3.12", "Programming Language :: Python :: 3.13", "Programming Language :: Python :: 3.14", "Typing :: Typed"]
+
+[project.urls]
+Documentation = "https://webmania.com.br/docs/"
+Terms = "https://webmania.com.br/termos-de-uso/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/webmania"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "scripts/", "tests/", "examples/", "pyproject.toml", "README.md", "LICENSE", "CHANGELOG.md", "contracts.lock.json", "requirements-dev.lock", "requirements-runtime.lock"]
+
+exclude = ["**/.DS_Store", "**/._*"]
+
+[[tool.mypy.overrides]]
+module = ["jsonschema", "jsonschema.*"]
+ignore_missing_imports = true
